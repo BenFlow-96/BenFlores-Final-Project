@@ -18,7 +18,7 @@ body {
 /* NAV */
 header {
   background: var(--dark-green);
-  color: white;
+  color: rgb(19, 77, 29);
   padding: 15px;
 }
 
@@ -37,7 +37,7 @@ header {
 }
 
 .nav-links a:hover, nav a:hover {
-  color: #c8e6c9;
+  color: #7ad87d;
 }
 
 /* HERO (CLEAN GREEN OVERLAY) */
@@ -46,7 +46,7 @@ header {
   url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
-  color: white;
+  color: rgb(82, 227, 42);
   text-align: center;
   padding: 90px 20px;
 }
