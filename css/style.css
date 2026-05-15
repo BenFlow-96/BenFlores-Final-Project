@@ -1,10 +1,10 @@
 /* =========================
-   GREEN TECH GLOBAL THEME
+   GREEN TECH 
 ========================= */
 
 :root {
   --green: #2e7d32;
-  --dark-green: #1b5e20;
+  --dark: #1b5e20;
   --light: #f5f7f5;
   --card: #ffffff;
   --text: #1a1a1a;
@@ -13,76 +13,77 @@
 
 
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
-  background: var(--green);
-}
-
-body {
-  min-height: 100vh;
+  min-height: 100%;
+  background: var(--light);
   font-family: Arial, sans-serif;
   color: var(--text);
-  line-height: 1.6;
 }
 
 /* =========================
-   NAVIGATION 
+   HEADER 
 ========================= */
 
-header {
-  background: var(--dark-green);
-  padding: 15px;
-}
+.site-header {
+  background: var(--dark);
+  padding: 15px 25px;
 
-/* MAIN NAV BAR */
-.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.brand {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* NAV BUTTONS */
+.site-nav {
+  display: flex;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
-/* LINKS CONTAINER */
-.nav-links {
-  display: flex;
-  gap: 12px;
-}
-
-/* NAV LINKS */
-.nav-links a,
-nav a {
+.site-nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  padding: 8px 10px;
+
+  padding: 8px 12px;
   border-radius: 6px;
+
+  background: rgba(255,255,255,0.08);
   transition: 0.2s ease;
 }
 
-/* HOVER EFFECT */
-.nav-links a:hover,
-nav a:hover {
-  background: rgba(255, 255, 255, 0.18);
+.site-nav a:hover {
+  background: rgba(255,255,255,0.25);
   color: #c8e6c9;
 }
 
 /* =========================
-   HERO SECTION 
+   HERO
 ========================= */
 
 .hero {
   background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
   url("../images/hero.jpg");
+
   background-size: cover;
   background-position: center;
+
   color: white;
   text-align: center;
   padding: 90px 20px;
 }
 
 /* =========================
-   GRID LAYOUT (PRODUCTS/BLOG)
+   LAYOUT
 ========================= */
 
 .grid {
@@ -92,81 +93,66 @@ nav a:hover {
   padding: 20px;
 }
 
-/* =========================
-   CARDS (CONTENT BOXES)
-========================= */
-
+/* CARDS */
 .card {
   background: var(--card);
   border-radius: 12px;
   padding: 15px;
+
   box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+
   transition: transform 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
 }
 
-/* =========================
-   IMAGES 
-========================= */
-
+/* IMAGES */
 img {
   width: 100%;
   border-radius: 10px;
 }
 
-/* =========================
-   FORMS (CONTACT PAGE)
-========================= */
-
+/* FORM */
 input, textarea {
   width: 100%;
   padding: 10px;
   margin: 8px 0;
+
   border: 1px solid #ccc;
   border-radius: 6px;
 }
 
-/* =========================
-   BUTTONS
-========================= */
-
+/* BUTTON */
 button {
   background: var(--accent);
   color: white;
   border: none;
+
   padding: 10px;
   border-radius: 6px;
   cursor: pointer;
-  transition: 0.2s ease;
 }
 
 button:hover {
   background: var(--green);
 }
 
-/* =========================
-   MOBILE RESPONSIVENESS
-========================= */
-
+/* MOBILE */
 @media (max-width: 768px) {
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: var(--dark-green);
-    padding: 10px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .navbar {
+  .site-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .site-nav {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .site-nav a {
+    width: fit-content;
   }
 }
