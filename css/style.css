@@ -1,50 +1,48 @@
 :root {
-  --green: #1b5e20;
-  --light: #f1fbf3;
-  --earth: #a5d6a7;
-  --dark: #102015;
-  --accent: #43a047;
+  --green: #2e7d32;
+  --dark-green: #1b5e20;
+  --light: #f5f7f5;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --accent: #4caf50;
 }
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: var(--light);
-  color: var(--dark);
+  color: var(--text);
+  line-height: 1.6;
 }
 
 /* NAV */
 header {
-  background: var(--green);
+  background: var(--dark-green);
   color: white;
   padding: 15px;
 }
 
-.navbar {
+.navbar, nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 
-.nav-links {
-  display: flex;
-  gap: 12px;
-}
-
-.nav-links a {
+.nav-links a, nav a {
   color: white;
   text-decoration: none;
+  margin: 8px;
   font-weight: bold;
 }
 
-.nav-links a:hover {
-  color: var(--earth);
+.nav-links a:hover, nav a:hover {
+  color: #c8e6c9;
 }
 
-/* HERO */
+/* HERO (CLEAN GREEN OVERLAY) */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
   url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
@@ -53,26 +51,28 @@ header {
   padding: 90px 20px;
 }
 
-/* CARDS */
+/* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
   padding: 20px;
 }
 
+/* CARDS */
 .card {
-  background: white;
+  background: var(--card);
   border-radius: 12px;
   padding: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
+/* IMAGES */
 img {
   width: 100%;
   border-radius: 10px;
@@ -83,17 +83,27 @@ input, textarea {
   width: 100%;
   padding: 10px;
   margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* BUTTON */
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--green);
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
+  nav, .nav-links {
     flex-direction: column;
-    width: 100%;
-  }
-
-  .nav-links.active {
-    display: flex;
   }
 }
