@@ -11,16 +11,12 @@
   --accent: #4caf50;
 }
 
-/* =========================
-   FIX GRAY BACKGROUND ISSUE
-   (IMPORTANT - FULL PAGE COVER)
-========================= */
 
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: var(--light);
+  background: var(--green);
 }
 
 body {
@@ -31,7 +27,7 @@ body {
 }
 
 /* =========================
-   NAVIGATION (FIXED CONSISTENCY)
+   NAVIGATION 
 ========================= */
 
 header {
@@ -72,7 +68,7 @@ nav a:hover {
 }
 
 /* =========================
-   HERO SECTION (FIXED CONTRAST)
+   HERO SECTION 
 ========================= */
 
 .hero {
@@ -113,7 +109,7 @@ nav a:hover {
 }
 
 /* =========================
-   IMAGES (FULL RESPONSIVE)
+   IMAGES 
 ========================= */
 
 img {
