@@ -23,18 +23,24 @@
 
 <h1>Contact Us</h1>
 
-<form onsubmit="return validateForm()">
+<section class="card">
+  <p>Email: support@greentech.com</p>
+  <p>Phone: (555) 123-4567</p>
+  <p>Serving SMBs nationwide</p>
+</section>
 
-<label>Name</label>
-<input id="name" type="text">
+<form onsubmit="return validateForm()" class="card">
 
-<label>Email</label>
-<input id="email" type="email">
+  <label>Name</label>
+  <input id="name" type="text">
 
-<label>Message</label>
-<textarea></textarea>
+  <label>Email</label>
+  <input id="email" type="email">
 
-<button type="submit">Send Message</button>
+  <label>Message</label>
+  <textarea></textarea>
+
+  <button type="submit">Send Message</button>
 
 </form>
 
