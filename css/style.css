@@ -1,3 +1,7 @@
+/* =========================
+   GREEN TECH GLOBAL THEME
+========================= */
+
 :root {
   --green: #2e7d32;
   --dark-green: #1b5e20;
@@ -7,51 +11,84 @@
   --accent: #4caf50;
 }
 
-body {
+/* =========================
+   FIX GRAY BACKGROUND ISSUE
+   (IMPORTANT - FULL PAGE COVER)
+========================= */
+
+html, body {
+  height: 100%;
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
   background: var(--light);
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
   color: var(--text);
   line-height: 1.6;
 }
 
-/* NAV */
+/* =========================
+   NAVIGATION (FIXED CONSISTENCY)
+========================= */
+
 header {
   background: var(--dark-green);
-  color: rgb(19, 77, 29);
   padding: 15px;
 }
 
-.navbar, nav {
+/* MAIN NAV BAR */
+.navbar {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.nav-links a, nav a {
+/* LINKS CONTAINER */
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
+/* NAV LINKS */
+.nav-links a,
+nav a {
   color: white;
   text-decoration: none;
-  margin: 8px;
   font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: 0.2s ease;
 }
 
-.nav-links a:hover, nav a:hover {
-  color: #7ad87d;
+/* HOVER EFFECT */
+.nav-links a:hover,
+nav a:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #c8e6c9;
 }
 
-/* HERO (CLEAN GREEN OVERLAY) */
+/* =========================
+   HERO SECTION (FIXED CONTRAST)
+========================= */
+
 .hero {
   background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
   url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
-  color: rgb(82, 227, 42);
+  color: white;
   text-align: center;
   padding: 90px 20px;
 }
 
-/* GRID */
+/* =========================
+   GRID LAYOUT (PRODUCTS/BLOG)
+========================= */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -59,7 +96,10 @@ header {
   padding: 20px;
 }
 
-/* CARDS */
+/* =========================
+   CARDS (CONTENT BOXES)
+========================= */
+
 .card {
   background: var(--card);
   border-radius: 12px;
@@ -72,13 +112,19 @@ header {
   transform: translateY(-6px);
 }
 
-/* IMAGES */
+/* =========================
+   IMAGES (FULL RESPONSIVE)
+========================= */
+
 img {
   width: 100%;
   border-radius: 10px;
 }
 
-/* FORM */
+/* =========================
+   FORMS (CONTACT PAGE)
+========================= */
+
 input, textarea {
   width: 100%;
   padding: 10px;
@@ -87,7 +133,10 @@ input, textarea {
   border-radius: 6px;
 }
 
-/* BUTTON */
+/* =========================
+   BUTTONS
+========================= */
+
 button {
   background: var(--accent);
   color: white;
@@ -95,15 +144,33 @@ button {
   padding: 10px;
   border-radius: 6px;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
 button:hover {
   background: var(--green);
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
 @media (max-width: 768px) {
-  nav, .nav-links {
+
+  .nav-links {
+    display: none;
     flex-direction: column;
+    width: 100%;
+    background: var(--dark-green);
+    padding: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
