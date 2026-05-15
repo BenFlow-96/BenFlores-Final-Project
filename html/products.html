@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Products</title>
+
 <link rel="stylesheet" href="../css/style.css">
 <script defer src="../javascript/script.js"></script>
 </head>
@@ -10,21 +11,43 @@
 <body>
 
 <nav>
-<a href="../index.html">Home</a>
-<a href="about.html">About</a>
-<a href="products.html">Products</a>
-<a href="blog.html">Blog</a>
-<a href="contact.html">Contact</a>
-<a href="final.html">Final</a>
+  <a href="../index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="products.html">Products</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+  <a href="final.html">Final</a>
 </nav>
 
-<h1>Products</h1>
+<main>
 
-<input id="search" onkeyup="filterProducts()" placeholder="Search products">
+<h1>Eco Technology Products</h1>
 
-<div class="card product">Energy Efficient Sensor</div>
-<div class="card product">Smart Recycling Bin</div>
-<div class="card product">Carbon Tracking Software</div>
+<input id="search" onkeyup="filterProducts()" placeholder="Search eco products...">
+
+<div class="grid">
+
+  <div class="card product">
+    <img src="../images/product1.jpg" alt="Energy monitoring device dashboard">
+    <h3>Energy Efficiency Sensor</h3>
+    <p>Tracks and reduces electricity waste for businesses.</p>
+  </div>
+
+  <div class="card product">
+    <img src="../images/product2.jpg" alt="Smart recycling AI system">
+    <h3>Smart Recycling System</h3>
+    <p>Automated waste sorting for sustainability.</p>
+  </div>
+
+  <div class="card product">
+    <img src="../images/product3.jpg" alt="Carbon tracking software interface">
+    <h3>Carbon Tracking Software</h3>
+    <p>Monitors emissions and environmental impact.</p>
+  </div>
+
+</div>
+
+</main>
 
 </body>
 </html>

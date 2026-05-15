@@ -1,23 +1,23 @@
-// MOBILE NAV MENU
+// MOBILE NAVIGATION
 function toggleMenu() {
   document.getElementById("navLinks").classList.toggle("active");
 }
 
-// FORM VALIDATION (REQUIRED RUBRIC FEATURE)
+// FORM VALIDATION (REQUIRED)
 function validateForm() {
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
 
-  if (name === "" || email === "") {
-    alert("Please fill out all required fields.");
+  if (!name || !email) {
+    alert("Please complete all required fields.");
     return false;
   }
 
-  alert("Message sent successfully!");
+  alert("Message sent successfully to GreenTech Solutions!");
   return true;
 }
 
-// PRODUCT FILTER (INTERACTIVE FEATURE)
+// PRODUCT SEARCH FILTER (INTERACTIVE FEATURE)
 function filterProducts() {
   let input = document.getElementById("search").value.toLowerCase();
   let items = document.getElementsByClassName("product");
@@ -27,8 +27,3 @@ function filterProducts() {
     items[i].style.display = text.includes(input) ? "block" : "none";
   }
 }
-
-// SMALL INTERACTION BONUS (ANIMATION EFFECT)
-window.addEventListener("load", () => {
-  document.body.style.opacity = "1";
-});

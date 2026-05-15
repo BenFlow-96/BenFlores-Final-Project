@@ -1,9 +1,9 @@
 :root {
   --green: #1b5e20;
-  --light: #f4fbf4;
+  --light: #f1fbf3;
   --earth: #a5d6a7;
-  --dark: #10210f;
-  --accent: #4caf50;
+  --dark: #102015;
+  --accent: #43a047;
 }
 
 body {
@@ -11,10 +11,9 @@ body {
   font-family: Arial, sans-serif;
   background: var(--light);
   color: var(--dark);
-  line-height: 1.6;
 }
 
-/* HEADER */
+/* NAV */
 header {
   background: var(--green);
   color: white;
@@ -28,9 +27,13 @@ header {
   flex-wrap: wrap;
 }
 
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
 .nav-links a {
   color: white;
-  margin: 10px;
   text-decoration: none;
   font-weight: bold;
 }
@@ -47,7 +50,7 @@ header {
   background-position: center;
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 90px 20px;
 }
 
 /* CARDS */
@@ -67,7 +70,7 @@ header {
 }
 
 .card:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
 }
 
 img {
@@ -75,28 +78,11 @@ img {
   border-radius: 10px;
 }
 
-/* BUTTONS */
-button {
-  background: var(--accent);
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #2e7d32;
-}
-
 /* FORM */
 input, textarea {
   width: 100%;
   padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
+  margin: 8px 0;
 }
 
 /* MOBILE */
@@ -104,6 +90,7 @@ input, textarea {
   .nav-links {
     display: none;
     flex-direction: column;
+    width: 100%;
   }
 
   .nav-links.active {
