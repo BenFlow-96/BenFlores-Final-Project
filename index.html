@@ -1,67 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GreenTech Solutions offers eco-friendly technology solutions for sustainable businesses.">
-    <title>GreenTech Solutions | Home</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script defer src="js/script.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenTech Solutions</title>
+
+<link rel="stylesheet" href="css/style.css">
+<script defer src="javascript/script.js"></script>
 </head>
+
 <body>
+
 <header>
-    <nav class="navbar" aria-label="Main Navigation">
-        <div class="logo">GreenTech Solutions</div>
-        <button class="menu-toggle" aria-label="Toggle Navigation">☰</button>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="final.html">Final</a></li>
-        </ul>
-    </nav>
+<nav class="navbar">
+  <h1>GreenTech</h1>
+
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+
+  <div id="navLinks" class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="html/about.html">About</a>
+    <a href="html/products.html">Products</a>
+    <a href="html/blog.html">Blog</a>
+    <a href="html/contact.html">Contact</a>
+    <a href="html/final.html">Final</a>
+  </div>
+</nav>
 </header>
 
 <main>
-    <section class="hero">
-        <h1>Innovating Sustainability Through Technology</h1>
-        <p>Helping businesses reduce their carbon footprint with eco-friendly devices, smart recycling systems, and carbon tracking software.</p>
-        <a href="products.html" class="btn">Explore Products</a>
-    </section>
 
-    <section class="features">
-        <article>
-            <img src="images/product1.jpg" alt="Energy-efficient office technology device for sustainable businesses">
-            <h2>Energy-Efficient Devices</h2>
-            <p>Reduce energy consumption while maximizing productivity.</p>
-        </article>
-        <article>
-            <img src="images/product2.jpg" alt="Smart recycling station for eco-friendly business waste management">
-            <h2>Smart Recycling Systems</h2>
-            <p>Automated recycling solutions for modern businesses.</p>
-        </article>
-        <article>
-            <img src="images/product3.jpg" alt="Carbon tracking software dashboard displaying sustainability metrics">
-            <h2>Carbon Tracking Software</h2>
-            <p>Monitor and improve sustainability metrics easily.</p>
-        </article>
-    </section>
+<section class="hero">
+  <h2>Green Technology for a Better Future</h2>
+  <p>Helping businesses reduce carbon footprints through innovation.</p>
+</section>
 
-    <section class="newsletter">
-        <h2>Stay Updated</h2>
-        <form id="newsletterForm">
-            <label for="newsletter-email">Email:</label>
-            <input type="email" id="newsletter-email" required>
-            <button type="submit">Subscribe</button>
-        </form>
-        <p id="newsletterMessage"></p>
-    </section>
+<section class="grid">
+
+  <div class="card">
+    <img src="images/energy.jpg" alt="Energy efficient devices">
+    <h3>Energy Efficient Devices</h3>
+  </div>
+
+  <div class="card">
+    <img src="images/recycling.jpg" alt="Smart recycling system">
+    <h3>Smart Recycling Systems</h3>
+  </div>
+
+  <div class="card">
+    <img src="images/carbon.jpg" alt="Carbon tracking software">
+    <h3>Carbon Tracking Software</h3>
+  </div>
+
+</section>
+
 </main>
 
 <footer>
-    <p>&copy; 2026 GreenTech Solutions. Sustainable innovation for a better future.</p>
+<p>© 2026 GreenTech Solutions</p>
 </footer>
+
 </body>
 </html>

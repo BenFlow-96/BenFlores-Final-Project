@@ -1,41 +1,29 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
 
-    if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    }
+/* CONTACT FORM VALIDATION */
+function validateForm() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
 
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            document.getElementById('formMessage').textContent = 'Thank you! Your message has been sent.';
-            contactForm.reset();
-        });
-    }
+  if (!name || !email) {
+    alert("Please fill out all fields");
+    return false;
+  }
 
-    const newsletterForm = document.getElementById('newsletterForm');
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            document.getElementById('newsletterMessage').textContent = 'Successfully subscribed!';
-            newsletterForm.reset();
-        });
-    }
+  alert("Message sent successfully!");
+  return true;
+}
 
-    const productSearch = document.getElementById('productSearch');
-    if (productSearch) {
-        productSearch.addEventListener('keyup', function() {
-            const filter = productSearch.value.toLowerCase();
-            const products = document.querySelectorAll('.product-card');
+/* PRODUCT SEARCH FILTER */
+function filterProducts() {
+  let input = document.getElementById("search").value.toLowerCase();
+  let items = document.getElementsByClassName("product");
 
-            products.forEach(product => {
-                const text = product.textContent.toLowerCase();
-                product.style.display = text.includes(filter) ? '' : 'none';
-            });
-        });
-    }
-});
+  for (let item of items) {
+    item.style.display = item.innerText.toLowerCase().includes(input)
+      ? "block"
+      : "none";
+  }
+}

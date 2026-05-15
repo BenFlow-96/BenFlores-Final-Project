@@ -1,25 +1,30 @@
 # BenFlores-Final-Project
-# GreenTech Solutions Final Project
+# GreenTech Solutions Website
 
-## Overview
-A responsive, accessible website for GreenTech Solutions focused on sustainable technology solutions.
+## Description
+A responsive, accessible website built for an eco-friendly technology company.
 
 ## Features
-- Semantic HTML5 pages
-- Responsive CSS design
-- JavaScript interactivity
-- WCAG accessibility compliance
-- Mobile-friendly layouts
+- Multi-page navigation
+- Mobile responsive design
+- Product search filter
+- Contact form validation
+- WCAG accessibility (alt text, semantic HTML)
 
-## Technologies Used
+## Technologies
 - HTML5
 - CSS
 - JavaScript
 
-## Setup Instructions
-1. Download project files.
-2. Place images in the images folder.
-3. Open index.html in browser.
+## How to Run
+Open index.html in a browser.
+
+## Images Needed
+Place in /images:
+- hero.jpg
+- energy.jpg
+- recycling.jpg
+- carbon.jpg
 
 ## Author
 Ben Flores
